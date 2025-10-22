@@ -11,14 +11,19 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Menu Utama'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ScanScreen()),
-            );
-          },
-          child: const Text('Mulai Scan Teks'),
+        child: Card(
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          child: ListTile(
+            leading: const Icon(Icons.camera_alt, color: Colors.blue),
+            title: const Text('Mulai Pindai Teks Baru'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ScanScreen()),
+              );
+            },
+          ),
         ),
       ),
     );
