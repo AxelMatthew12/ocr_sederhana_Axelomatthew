@@ -45,5 +45,18 @@ Memmbuat routing button kembali ke Home
 ![image widget](./assets/ReviewSoal1.jpg)
 ![image widget](./assets/ReviewSoal1part2.jpg)
 
+## Soal 2: Penyesuaian Tampilan dan Penanganan State/Error (40 Poin)
 
 
+1. Custom Loading Screen di ScanScreen (20 Poin):
+![image widget](./assets/Mengubahscan_screen.png)
+
+2. Spesifikasi Pesan Error (20 Poin):
+![image widget](./assets/takepicturevoid.png)
+
+## HASIL UNTUK SOAL 2
+![image widget](./assets/loadingscreen.jpg)
+
+
+
+## Soal 2: Modifikasi Struktur Navigasi dan Aliran (30 Poin)
