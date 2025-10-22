@@ -2,6 +2,12 @@
 
 a Application for scanning and detecting text 
 
+Nama : AXELO MATTHEW TERANG BARUS
+
+KELAS : SIB 3C
+
+NO ABSEN : 07
+
 ## PENDAHULUAN 
 
 ![image widget](./assets/checkingGithub.png)
