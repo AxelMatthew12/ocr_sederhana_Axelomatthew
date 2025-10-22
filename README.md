@@ -59,4 +59,22 @@ Memmbuat routing button kembali ke Home
 
 
 
-## Soal 2: Modifikasi Struktur Navigasi dan Aliran (30 Poin)
+## Soal 3: Implementasi Plugin Text-to-Speech (TTS) 30Poin 
+
+1. Instalasi Plugin (5 Poin):
+![image widget](./assets/memasangplugintts.png)
+
+2. Konversi Widget dan Inisialisasi (10 Poin):
+![image widget](./assets/melakukanpemasangan.png)
+
+3. Fungsionalitas Pembacaan (15 Poin):
+![image widget](./assets/ttslaguange.png)
+
+## HASIL UNTUK SOAL 3
+
+![image widget](./assets/audio.jpg)
+
+
+
+
+
