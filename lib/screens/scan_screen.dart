@@ -33,7 +33,7 @@ class _ScanScreenState extends State<ScanScreen> {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Gagal mengakses kamera: $e')),
+        const SnackBar(content: Text('Pemindaian Gagal! Periksa Izin Kamera atau coba lagi.')),
       );
     }
   }
@@ -51,8 +51,8 @@ class _ScanScreenState extends State<ScanScreen> {
       final RecognizedText recognizedText = await textRecognizer.processImage(inputImage);
       textRecognizer.close();
       return recognizedText.text;
-    } catch (e) {
-      return 'Gagal memproses gambar: $e';
+    } catch (_) {
+      return ''; // Kembalikan string kosong jika OCR gagal
     }
   }
 
@@ -73,15 +73,22 @@ class _ScanScreenState extends State<ScanScreen> {
 
       if (!mounted) return;
 
-      // Navigasi ke ResultScreen dengan hasil OCR
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => ResultScreen(ocrText: ocrText)),
-      );
-    } catch (e) {
+      if (ocrText.isEmpty) {
+        // Jika teks hasil OCR kosong, tampilkan pesan gagal
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Pemindaian Gagal! Periksa Izin Kamera atau coba lagi.')),
+        );
+      } else {
+        // Navigasi ke ResultScreen dengan hasil OCR
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => ResultScreen(ocrText: ocrText)),
+        );
+      }
+    } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error saat mengambil/memproses foto: $e')),
+        const SnackBar(content: Text('Pemindaian Gagal! Periksa Izin Kamera atau coba lagi.')),
       );
     }
   }
